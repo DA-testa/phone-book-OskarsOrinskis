@@ -1,6 +1,7 @@
 # python3
-
+# nevarēju nodot darbu caur codespaces, izpildiju darbu tur parliku vs studio, ta tikai vareju nodot
 class Query:
+    
     def __init__(self, query):
         self.type = query[0]
         self.number = int(query[1])
@@ -8,6 +9,7 @@ class Query:
             self.name = query[2]
 
 def read_queries():
+    
     n = int(input())
     return [Query(input().split()) for i in range(n)]
 
@@ -29,6 +31,7 @@ def process_queries (queries):
             response = contacts.get(cur_query.number, 'not found')
             result.append(response)
     return result
+
 
 if __name__ == '__main__':
     write_responses(process_queries(read_queries()))
